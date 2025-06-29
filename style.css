@@ -1,0 +1,200 @@
+/* style.css */
+
+/* 1. Цвета и размеры */
+:root {
+  --primary:       #5584AC;
+  --secondary:     #FF8C42;
+  --dark:          #334E68;
+  --light:         #F7F9FC;
+  --text:          #334E68;
+  --border:        #DDE4EC;
+  --radius:        8px;
+  --gap:           1rem;
+  --shadow:        0 4px 12px rgba(0,0,0,0.1);
+  --transition:    all 0.3s ease;
+}
+
+/* 2. Сброс */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* 3. Skip link для a11y */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius);
+  text-decoration: none;
+  z-index: 1000;
+}
+
+/* 4. Контейнер */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--gap) 0;
+}
+
+/* 5. Header */
+.site-header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  padding: 4rem 0;
+  text-align: center;
+  color: #fff;
+  box-shadow: var(--shadow);
+  flex: none;
+}
+.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.site-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* 6. Основной контент */
+main {
+  flex: 1;
+  padding: var(--gap) 0;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+/* 6.1 Введение */
+.intro {
+  margin: 2rem 0;
+  text-align: left;
+  font-size: 1.1rem;
+}
+.intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+/* 6.2 Секция статей */
+.articles {
+  margin-bottom: 3rem;
+}
+.articles h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--dark);
+  position: relative;
+  text-align: left;
+}
+.articles h3::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 95px;
+  transform: translateX(-50%);
+  width: 190px;
+  height: 2px;
+  background: var(--secondary);
+  border-radius: 2px;
+}
+
+/* 6.3 Список статей */
+.articles-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: var(--gap);
+}
+.articles-list li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.articles-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 2px solid var(--secondary);
+  border-radius: 50%;
+}
+.articles-list a {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+.articles-list a:hover {
+  color: var(--secondary);
+  transform: translateX(4px);
+}
+
+/* 7. Footer */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  text-align: center;
+  flex: none;
+}
+.site-footer a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* 8. Адаптив */
+@media (max-width: 600px) {
+  .site-title {
+    font-size: 2.2rem;
+  }
+  .articles-list {
+    grid-template-columns: 1fr;
+  }
+  .intro h2 {
+    font-size: 1.75rem;
+  }
+  .articles h3 {
+    font-size: 1.75rem;
+  }
+}
+
