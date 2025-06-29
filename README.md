@@ -1,5 +1,3 @@
-# leben-in-bewegung
-
 # GesundeGelenke blog
 
 Ein persönlicher Blog über Schmerzen, Umwege und kleine Fortschritte.  
