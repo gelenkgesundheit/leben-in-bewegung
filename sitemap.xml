@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://gelenkgesundheit.github.io/leben-in-bewegung/</loc>
-    <lastmod>2024-06-29</lastmod>
+    <loc>https://gelenkgesundheit.github.io/leben-in-bewegung/index.html</loc>
   </url>
   <url>
     <loc>https://gelenkgesundheit.github.io/leben-in-bewegung/hintergrund.html</loc>
-    <lastmod>2024-07-05</lastmod>
   </url>
   <url>
     <loc>https://gelenkgesundheit.github.io/leben-in-bewegung/knie-knackt-beim-laufen.html</loc>
-    <lastmod>2024-07-07</lastmod>
   </url>
+  <url>
+    <loc>https://gelenkgesundheit.github.io/leben-in-bewegung/gelenkschmerzen-finger-erfahrungen.html</loc>
+  </url>
+
 </urlset>
